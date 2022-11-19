@@ -1,0 +1,37 @@
+$blue: #007bff;
+$red: red;
+$grey: grey;
+$white: #e9ecef;
+
+.progress-bar {
+  border: 1px solid $grey;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  &--selected {
+    border: 2px solid $blue;
+  }
+
+  display: flex;
+  overflow: hidden;
+  background-color: $white;
+
+  &__progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background-color: $blue;
+    transition: width 0.6s ease;
+    &--exceeded {
+      background-color: $red;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: 43%;
+  }
+}
